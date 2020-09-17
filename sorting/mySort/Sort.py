@@ -1,9 +1,11 @@
 class Sort():
 
     @staticmethod
-    def sort3(arr):
+    def myFirstSort(arr):
         output = []
-        for val in range(min(arr), max(arr) + 1, 1):
+        minVal = min(arr)
+        maxVal = max(arr) + 1
+        for val in range(minVal, maxVal, 1):
             for i in range(Sort.count_in_arr(arr, val)):
                 output.append(val)
         return output
