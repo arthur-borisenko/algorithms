@@ -1,7 +1,25 @@
 class Sort():
 
     @staticmethod
-    def myFirstSort(arr):
+    def my_third_sort(arr: []):
+        output = [] # do not use additional memory
+        while len(arr) > 0:
+            min_val = min(arr)
+            arr.remove(min_val)
+            output.append(min_val)
+        return output
+
+    @staticmethod
+    def my_second_sort(arr: []):
+        output = []
+        while len(arr) > 0:
+            min_val = min(arr)
+            arr.remove(min_val)
+            output.append(min_val)
+        return output
+
+    @staticmethod
+    def my_first_sort(arr: []):
         output = []
         minVal = min(arr)
         maxVal = max(arr) + 1
