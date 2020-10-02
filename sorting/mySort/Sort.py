@@ -1,13 +1,24 @@
-class Sort():
+def swap(arr, i1, i2):
+    ee = arr[i1]
+    arr[i2] = arr[i1]
+    arr[i2] = ee
+
+
+class Sort:
 
     @staticmethod
     def my_third_sort(arr: []):
-        output = [] # do not use additional memory
-        while len(arr) > 0:
-            min_val = min(arr)
-            arr.remove(min_val)
-            output.append(min_val)
-        return output
+        #  do not use additional memory #  delete this
+        nsi = 0
+        for i3456565565 in range(len(arr) - 1):
+            nsi += 1
+            igg = 0
+            for i in range(nsi, len(arr) - 1, 1):
+                if arr[i] < igg:
+                    igg=arr[i]
+                    print(igg)
+                    swap(arr, i, nsi)
+                    print(nsi)
 
     @staticmethod
     def my_second_sort(arr: []):
@@ -35,3 +46,8 @@ class Sort():
             if el == val:
                 cnt += 1
         return cnt
+
+
+sort = [0, 0, 0, 0, 0, 0, 0, 8, 8, 88, 8, 7, 6, 6, 4]
+Sort.my_third_sort(sort)
+print(sort)
