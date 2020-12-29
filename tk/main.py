@@ -9,6 +9,7 @@ def start():
     screen_saver = ScreenSaverWidget(window_size, sleepInterval)
     screen_saver.start()
 
-for i in range(1):
+
+for i in range(20):
     thread1 = Thread(target=start)
     thread1.start()
