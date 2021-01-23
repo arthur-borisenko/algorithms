@@ -1,5 +1,7 @@
 from tkinter import *
-from tk.circle_in_rectangle import CircleInRectangle
+from tk.figures.circle_in_rectangle import CircleInRectangle
+from tk.figures.rectangle import Rectangle
+from tk.figures.triangle import Triangle
 from time import sleep
 
 
@@ -18,13 +20,10 @@ class ScreenSaverWidget:
 
     def start(self):
         while True:
-            oval = CircleInRectangle(self.window_size)
-            self.canvas.create_oval(
-                oval.left_corner_x,
-                oval.left_corner_y,
-                oval.right_corner_x,
-                oval.right_corner_y,
-                fill=oval.color_hex
-            )
+            CircleInRectangle(self.window_size).draw(self.canvas)
+            Rectangle(self.window_size).draw(self.canvas)
+            Triangle(self.window_size).draw(self.canvas)
+
+
             self.mainWindow.update()
             sleep(float(self.sleep_interval) / 10)

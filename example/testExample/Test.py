@@ -8,7 +8,7 @@ class TestStringMethods(unittest.TestCase):
         task = Task()
         self.assertEqual(task.method_example(), 1)
 
-    def test_static_menthod_example(self):
+    def test_static_method_example(self):
         self.assertEqual(Task.staticmethod_example(), 1)
 
     def test_console_example(self):
